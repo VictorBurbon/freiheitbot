@@ -123,7 +123,7 @@ async def rules_eng(ctx):
 async def predlog(ctx):
     """Предложения по улучшению"""
     emb = discord.Embed(title= "Предложения по улучшению Discord-сервера Freiheit.", description= "`Уважаемые участники сообщества Freiheit, если у Вас есть предложения по улучшению и развитию нашего Discord-сервера, Вы можете изложить их в этом канале. Рассматриваются любые разумные предложения и нововведения.`", colour= 0x39d0d6)
-    emb.add_field(name= "**В данном канале запрещенны любые проявления offtop`a. Форма подачи предложения по улучшению свободная, главное чёткое и обоснованое объяснение цели и необходимость нововведения. Чтобы вашу идею приняли потребуется 7 позитивных(:checkmarkmicrosoft:) голосов.**", value= "С уважением, Freiheit Team.", inline=True)
+    emb.add_field(name= "**Запрещенны любые проявления offtop`a. Форма подачи предложения по улучшению свободная, главное чёткое и обоснованое объяснение цели и необходимость нововведения. Чтобы вашу идею приняли потребуется 7 позитивных голосов.**", value= "С уважением, Freiheit Team.", inline=True)
     emb.set_image(url= "https://i.imgur.com/GtJtvm6.png")
     emb.set_footer(text= "Freiheit Bot", icon_url= Bot.user.avatar_url)
     emb.timestamp = datetime.datetime.utcnow()
