@@ -8,7 +8,7 @@ import asyncio
 import datetime
 from itertools import cycle
 import os
-import Cybernator
+pip  install Cybernator
 from Cybernator import Rolegator
 
 prefix = '/'
