@@ -77,6 +77,8 @@ async def autorole2(ctx):
     emb.add_field(name= "🧙‍♂️ - Destiny 2", value= "🦸 - PUBG", inline=True)
     emb.add_field(name= "🧟‍♀️ - Witcher 3", value= "🧝‍♂️ - Skyrim", inline=True)
     emb.add_field(name= "💪 - Arma", value= "👮 - Garry’s Mod", inline=True)
+    emb.add_field(name= "🤘 - PayDay 2", value= "👌 - WILDLANDS", inline=True)
+    emb.add_field(name= "🍏 - Team Fortress", value= "🍆 - Titanfall", inline=True)
     emb.set_footer(text= "Freiheit Bot • 29.11.20", icon_url= Bot.user.avatar_url)
     await ctx.send(embed= emb)
 
@@ -317,22 +319,22 @@ async def msg(ctx, member: discord.Member = None):
 
 
 Rolegator(bot=Bot,
-          emoji_role={'🧠': 782636218873151519, #dota
-                      '🔫': 782636220144025651, #cs_go
-                      '🌳': 782636209754603561,  #minecraft
-                      '🏃': 782347892347823489, #tarkov
-                      '🧤': 843787847895478954, #six siege
-                      '✈️': 893247893478934789, #war thunder
-                      '🌰': 346234783223784784,  #apex
-                      '👽': 883479748783478943, #paladins
-                      '💀': 843784783478487434, #killing flor 2
-                      '😈': 783347834843847884, #among us
-                      '🤖': 743347347734747474, #overwatch
-                      '👑': 784378347834734874, #GTA5
-                      '👞': 347878347834783478, #RDR2
-                      '👨‍💻': 378278234782347842, #WATCH DOGS 2
-                      '☢️': 837278437847847874, #STALKER
-                      '🚚': 823782373787337837 #ETC2
+          emoji_role={'🧠': 782699702868377611, #dota
+                      '🔫': 782700088698470421, #cs_go
+                      '🌳': 782700168013021224,  #minecraft
+                      '🏃': 782700242135023667, #tarkov
+                      '🧤': 782700356983324692, #six siege
+                      '✈️': 782700456098791465, #war thunder
+                      '🌰': 782700526671495169,  #apex
+                      '👽': 782700606585831435, #paladins
+                      '💀': 782700678854344759, #killing flor 2
+                      '😈': 782700744045494302, #among us
+                      '🤖': 782700800413138975, #overwatch
+                      '👑': 782700864636715018, #GTA5
+                      '👞': 782700948279394314, #RDR2
+                      '👨‍💻': 782701004402720818, #WATCH DOGS 2
+                      '☢️': 782701092349149215, #STALKER
+                      '🚚': 782701221390581782 #ETC2
           },
           message_id=782695376637526016,
           channel_id=782635094380118046,
@@ -341,14 +343,18 @@ Rolegator(bot=Bot,
 
 
 Rolegator(bot=Bot,
-          emoji_role={'🧙‍♂️': 478347837847834784, #desteny2
-                      '🦸': 348734783478834784, #PUBG
-                      '🧟‍♀️': 347878343478347878, #Witcher 3
-                      '🧝‍♂️': 347347734743747474, #SkyRim
-                      '💪': 83477834783478348, #ARMA
-                      '👮': 38477823478347844, #GarrysMode
-                      '🤠': 372373773783783233, #GENERALS 
-                      '🧙‍♀️': 347878347834783478 #warframe
+          emoji_role={'🧙‍♂️': 782701513977102336, #desteny2
+                      '🦸': 782701601496104990, #PUBG
+                      '🧟‍♀️': 782701676406636585, #Witcher 3
+                      '🧝‍♂️': 782701768693121025, #SkyRim
+                      '💪': 782702227143131168, #ARMA
+                      '👮': 782702267635335208, #GarrysMode
+                      '🤠': 782701330199347260, #GENERALS 
+                      '🧙‍♀️': 782701403914240021, #warframe
+                      '🤘': 782702776459329586, #payday
+                      '👌': 782702336350486589, #breackpoint
+                      '🍏': 782702446144520212, #team fortress
+                      '🍆': 782702532417945621 #titan
           },
           message_id=782695399974371329,
           channel_id=782635094380118046,
