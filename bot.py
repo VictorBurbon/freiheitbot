@@ -336,8 +336,8 @@ Rolegator(bot=Bot,
                       '☢️': 782701092349149215, #STALKER
                       '🚚': 782701221390581782 #ETC2
           },
-          message_id=782695376637526016,
-          channel_id=782635094380118046,
+          message_id=782708834815705128,
+          channel_id=782708075115053096,
           role_remove=True, 
           role_member_join=False).start()
 
@@ -356,8 +356,8 @@ Rolegator(bot=Bot,
                       '🍏': 782702446144520212, #team fortress
                       '🍆': 782702532417945621 #titan
           },
-          message_id=782695399974371329,
-          channel_id=782635094380118046,
+          message_id=782708867120496661,
+          channel_id=782708075115053096,
           role_remove=True, 
           role_member_join=False).start()
 
