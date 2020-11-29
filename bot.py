@@ -65,7 +65,7 @@ async def autorole1(ctx):
     emb.add_field(name= "💀 - Killing Floor 2", value= "😈 - Among Us", inline=True)
     emb.add_field(name= "🤖 - Overwatch", value= "👑 - GTA 5", inline=True)
     emb.add_field(name= "👞 - RDR 2", value= "👨‍💻 - Watch Dogs 2", inline=True)
-    emb.add_field(name= "☢️ - STALKER", value= "🚚 - ETS", inline=True)
+    emb.add_field(name= "☢️ - STALKER", value= "🚚 - ETS 2", inline=True)
     emb.set_footer(text= "Freiheit Bot • 29.11.20", icon_url= Bot.user.avatar_url)
     await ctx.send(embed= emb)
 
@@ -74,9 +74,9 @@ async def autorole2(ctx):
     """Приветствие"""
     emb = discord.Embed(title= "Автовыдача роли по нажатию эмоции.", description= "`Продолжение.`", colour= 0x39d0d6)
     emb.add_field(name= "🤠 - Command and Conquer Generals ", value= "🧙‍♀️ - Warframe", inline=True)
-    emb.add_field(name= "🧙‍♂️ - Desteny 2", value= "🦸 - PUBG", inline=True)
-    emb.add_field(name= "🧟‍♀️ - Witcher 3", value= "🧝‍♂️ - Sky Rim", inline=True)
-    emb.add_field(name= "💪 - Arma", value= "👮 - Garrys Mode", inline=True)
+    emb.add_field(name= "🧙‍♂️ - Destiny 2", value= "🦸 - PUBG", inline=True)
+    emb.add_field(name= "🧟‍♀️ - Witcher 3", value= "🧝‍♂️ - Skyrim", inline=True)
+    emb.add_field(name= "💪 - Arma", value= "👮 - Garry’s Mod", inline=True)
     emb.set_footer(text= "Freiheit Bot • 29.11.20", icon_url= Bot.user.avatar_url)
     await ctx.send(embed= emb)
 
@@ -334,7 +334,7 @@ Rolegator(bot=Bot,
                       '☢️': 837278437847847874, #STALKER
                       '🚚': 823782373787337837 #ETC2
           },
-          message_id=782681461513519105,
+          message_id=782695376637526016,
           channel_id=782635094380118046,
           role_remove=True, 
           role_member_join=False).start()
@@ -350,7 +350,7 @@ Rolegator(bot=Bot,
                       '🤠': 372373773783783233, #GENERALS 
                       '🧙‍♀️': 347878347834783478 #warframe
           },
-          message_id=782681568019480586,
+          message_id=782695399974371329,
           channel_id=782635094380118046,
           role_remove=True, 
           role_member_join=False).start()
