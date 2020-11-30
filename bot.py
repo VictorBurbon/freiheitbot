@@ -132,8 +132,8 @@ async def predlog(ctx):
 @Bot.command(pass_context= True)
 async def meme(ctx):
     """Приколы"""
-    emb = discord.Embed(title= "Screenshots and Memes.", description= "`Доброго времени суток, уважаемые участники USS. Если у Вас имееться множество интересных или смешных скриншотов касаемых SAMP'a и прочих игр, Вы можете поделиться этим в этом текстовом канале. `", colour= 0x39d0d6)
-    emb.add_field(name= "**Offtop/flood в данном канале карается длительным mute`ом.**", value= "С уважением, USS Team.", inline=True)
+    emb = discord.Embed(title= "Screenshots and Memes.", description= "`Уважаемые участники сообщества Freiheit, если у Вас есть интересные скриншоты, либо смешные мемы, Вы можете поделиться ими в этом текстовом канале.`", colour= 0x39d0d6)
+    emb.add_field(name= "**Offtop/flood в данном канале карается длительным mute`ом.**", value= "С уважением, Freiheit Team.", inline=True)
     emb.set_image(url= "https://i.imgur.com/GtJtvm6.png")
     emb.set_footer(text= "Freiheit Bot", icon_url= Bot.user.avatar_url)
     emb.timestamp = datetime.datetime.utcnow()
@@ -141,8 +141,8 @@ async def meme(ctx):
 
 @Bot.command(pass_context= True)
 async def razdat(ctx):
-    emb = discord.Embed(title= "Раздачи и конкурсы", description= f'`Доброго времени суток, уважаемые участники USS. В данном текстовом канале будут проходить разнообразные раздачи (Giveaway) и конкурсы. Спонсором раздач игровой валюты на сервере Diamond RP Amber будет` {ctx.author.mention}', colour= 0x39d0d6)
-    emb.add_field(name= f"**Если Вы хотите стать спонсором или организатором любой раздачи либо конкурса, будь то раздача игровой валюты на любом сервере, отписывайте модераторам USS Team.**", value= "С уважением, USS Team.", inline=True)
+    emb = discord.Embed(title= "Раздачи и конкурсы", description= "`Уважаемые участники Freiheit, в данном текстовом канале будут проходить разнообразные раздачи (Giveaway) и конкурсы.`", colour= 0x39d0d6)
+    emb.add_field(name= "**Если Вы хотите стать спонсором или организатором любой раздачи либо конкурса, отписывайте модераторам Freiheit Team.**", value= "С уважением, Freiheit Team.", inline=True)
     emb.set_image(url= "https://i.imgur.com/GtJtvm6.png")
     emb.set_footer(text= "Freiheit Bot", icon_url= Bot.user.avatar_url)
     emb.timestamp = datetime.datetime.utcnow()
@@ -258,8 +258,8 @@ async def coin(ctx):
 @commands.has_permissions(administrator = True) 
 async def cmd(ctx):
     await ctx.message.delete() 
-    role = ctx.guild.get_role(656579155479232513) 
-    emb = discord.Embed(title= "GIVEAWAY начат", description=f" {role.mention} **Для участия нажмите на реакцию ниже. Приз: 50.000$. Результат через 12 часов.**", color=0x99ff99)
+    role = ctx.guild.get_role(635146252543066122) 
+    emb = discord.Embed(title= "GIVEAWAY начат", description=f" {role.mention} **Для участия нажмите на реакцию ниже. Приз: unknown_argument.**", color=0x99ff99)
     emb.set_footer(text= f"Cпонсор: {ctx.author.nick if ctx.author.nick else ctx.author.name}", icon_url=str(ctx.message.author.avatar_url))
     emb.timestamp = datetime.datetime.utcnow()
     await ctx.send(embed=emb) 
@@ -409,7 +409,7 @@ async def mute(ctx, member: discord.Member = None, seconds = None, reason = None
             elif reason == None:
                 await ctx.send("**Используй: /mute '@username' 'время' (секунды) 'причина'**")
             else:
-                role = ctx.guild.get_role(622759806448566303) 
+                role = ctx.guild.get_role(782970037274411060) 
                 sec = float(seconds)
                 emb = discord.Embed()
                 await member.add_roles(role)
@@ -455,7 +455,7 @@ async def unmute(ctx, member : discord.Member = None):
                 membern = member.name
                 unmute_cnt = f"Пользователь {membern} быз раззамучен модератором {ctx.author}!"
                 emb = discord.Embed(title= "UnMute", description= unmute_cnt, colour= 0x000000)
-                role = ctx.guild.get_role(622759806448566303)
+                role = ctx.guild.get_role(782970037274411060)
                 await member.remove_roles(role)
                 await ctx.send(embed= emb)
         except:
