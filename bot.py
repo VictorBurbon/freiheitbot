@@ -10,13 +10,16 @@ from itertools import cycle
 import os
 from Cybernator import Rolegator
 
-prefix = '/'
+intents = discord.Intents.all()
 
-Bot = commands.Bot(command_prefix= prefix)
+Bot = commands.Bot(command_prefix='/', intents=intents)
 
 Bot.remove_command('help')
 
-        
+@Bot.event
+async def on_member_join(member):
+    role =discord.utils.get(member.guild.roles, name='Рядовой')
+    await member.add_roles(role)
 
 @Bot.event
 async def on_ready():
