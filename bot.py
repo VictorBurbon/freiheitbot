@@ -157,12 +157,13 @@ async def help(ctx):
     emb = discord.Embed(title= "Команды", colour= 0x39d0d6)
     emb.add_field(name= "Информация про команды", value= "`{}help`".format(prefix))
     emb.add_field(name= "Проверить ping", value= "`{}ping`".format(prefix))
+    emb.add_field(name= "Игра bibametr", value= "`{}bibametr`".format(prefix))
     emb.add_field(name= "Игра Coin", value= "`{}coin`".format(prefix))
     emb.add_field(name= "Посмотреть аватарку юзера", value= "`{}avatar @username`".format(prefix))
     emb.add_field(name= "Игра 8-ball", value= "`{}ball`".format(prefix))
     emb.add_field(name= "Правила сервера", value= "`{}rules`".format(prefix))
     emb.add_field(name= "Информация о юзере", value= "`{}info @username`".format(prefix))
-    emb.add_field(name= "Команды для модератора:", value= "`/petuh`,`/say <channel> <text>`,`/update_channel <channel>`,`/update_channel2 <channel>`,`/giveaway <channel> <msgid>`,`/cmd`,`/ban`,`/mute`,`/unmute`,`/kick`,`/clear`", inline=True)
+    emb.add_field(name= "Команды для модератора:", value= "`/clown`,`/say <channel> <text>`,`/update_channel <channel>`,`/update_channel2 <channel>`,`/giveaway <channel> <msgid>`,`/cmd`,`/ban`,`/mute`,`/unmute`,`/kick`,`/clear`", inline=True)
     emb.set_image(url= "https://i.imgur.com/GtJtvm6.png")
     emb.set_footer(text= f'Вызвано: {ctx.message.author}', icon_url= str(ctx.message.author.avatar_url))
     emb.timestamp = datetime.datetime.utcnow()
@@ -190,11 +191,11 @@ async def ping(ctx):
 
 @commands.has_permissions(administrator=True)
 @Bot.command()
-async def petuh(ctx):
+async def clown(ctx):
 
-    role = ctx.guild.get_role(657904038913900573) 
+    role = ctx.guild.get_role(783667435488018432) 
 
-    balbes = "Ghetto Петухов"
+    balbes = "Клоунов"
     bot = "бота"
     bots = "бота"
     member = "участников"
@@ -209,13 +210,13 @@ async def petuh(ctx):
         return await ctx.send(f'{ctx.author.mention} Ты один на сервере, {"не считая меня!" if bots_counter == 1 else f"не считая {bots_counter} {bot}!"}')
 
     elif not valid_members:
-        return await ctx.send('**ой, все пользователи уже Ghetto Петушня!** :smirk:')
+        return await ctx.send('**ой, все пользователи уже Клоуны!** :smirk:')
 
     elif len(valid_members) is 1:
         await ctx.send(f'{ctx.author.mention} Ну тут выбор очевиден! На сервере остался только один человек без роли :smirk:')
         random_member = valid_members[0]
     else:
-        await ctx.send(f'{ctx.author.mention} Немного подожди, я выбераю рандомного Ghetto Петуха среди **{members_counter}** {member}! :smirk:'
+        await ctx.send(f'{ctx.author.mention} Немного подожди, я выбераю рандомного Клоуна среди **{members_counter}** {member}! :smirk:'
                        f'\nА если быть точнее то из **{members_counter - bots_counter - role_counter}**, т.к на сервере ' + \
                        (f'**{bots_counter}** {bots}' if bots_counter > 1 else 'есть я, а я не считаюсь') + \
                        f' и у **{role_counter}** {members} уже есть роль!')
@@ -232,6 +233,8 @@ async def petuh(ctx):
         description=f'Роль {role.mention} присуждается {random_member.mention}\nТеперь на сервере **{role_counter + 1}** {balbes}')
     embed.set_footer(text= f"Вызвал(а): {ctx.author.nick if ctx.author.nick else ctx.author.name}", icon_url=str(ctx.message.author.avatar_url))
     await ctx.send(embed=embed)
+    await asyncio.sleep(86400) 
+    await random_member.remove_roles(role)
 
 
 @Bot.command()
@@ -490,7 +493,16 @@ async def ball(ctx, text: str=None):
          await ctx.message.add_reaction("❌")
          await ctx.author.send(e)
 
-
+@Bot.command()
+async def bibametr(ctx, arg: discord.Member = None):
+    await ctx.message.delete()
+    if not arg:
+        num = random.randint(-5,50)
+        await ctx.send(f"У {ctx.author.mention} биба " + str(num) + ' см')
+    else:
+        num = random.randint(1,50)
+        await ctx.send(f"У {arg.mention} биба " + str(num) + ' см')
+                              
            
 token = os.environ.get('BOT_TOKEN')                
 
