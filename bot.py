@@ -265,7 +265,7 @@ async def coin(ctx):
 async def cmd(ctx):
     await ctx.message.delete() 
     role = ctx.guild.get_role(635146252543066122) 
-    emb = discord.Embed(title= "GIVEAWAY начат", description=f" {role.mention} **Для участия нажмите на реакцию ниже. Приз: unknown_argument.**", color=0x99ff99)
+    emb = discord.Embed(title= "GIVEAWAY начат", description=f" {role.mention} **Для участия нажмите на реакцию ниже. Приз: 5 тысяч валюты сервера.**", color=0x99ff99)
     emb.set_footer(text= f"Cпонсор: {ctx.author.nick if ctx.author.nick else ctx.author.name}", icon_url=str(ctx.message.author.avatar_url))
     emb.timestamp = datetime.datetime.utcnow()
     await ctx.send(embed=emb) 
