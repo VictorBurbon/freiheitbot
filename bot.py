@@ -189,7 +189,7 @@ async def ping(ctx):
         emb.timestamp = datetime.datetime.utcnow()
         await ctx.send(embed=emb)
 
-@commands.has_permissions(administrator=True)
+@commands.has_permissions(manage_messages = True)
 @Bot.command()
 async def clown(ctx):
 
