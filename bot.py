@@ -18,7 +18,7 @@ Bot.remove_command('help')
 
 @Bot.event
 async def on_member_join(member):
-    role =discord.utils.get(member.guild.roles, name='Рядовой')
+    role =discord.utils.get(member.guild.roles, name='🤠Работяги')
     await member.add_roles(role)
 
 @Bot.event
